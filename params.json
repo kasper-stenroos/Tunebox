@@ -1,6 +1,6 @@
 {
   "name": "TuneBox",
-  "tagline": "Music Chat using MEAN Stack and YouTube API",
-  "body": "### Overview\r\n\r\n\r\n### Features\r\n\r\n\r\n### Upcoming Features\r\n\r\n\r\n### Technical Details\r\n\r\n\r\n### Authors and Contributors\r\nFour member group (@orostider, @kjghtp, @kasper-stenroos and @aidesign) studying Software Engineering on third year (Bachelor of Engineering).",
+  "tagline": "Music chat room using MEAN stack and YouTube API",
+  "body": "### Overview\r\nSchool project for Software Start-up course. The chat room software concentrates on music streaming and connects music enthusiasts with similar interests.\r\n\r\n### Features\r\nThe users need to register and they are divided to free users with limited number of private chat rooms and premium users with higher limits, who can also create public rooms.\r\n\r\n### Upcoming Features\r\nPlaylist support, voting mechanism, streaming live, location based suggestions\r\n\r\n### Technical Details\r\nThe project is implemented using MEAN stack. TuneBox has a browser client and uses YouTube API.\r\n\r\n### Authors and Contributors\r\nFour member group (@orostider, @kjghtp, @kasper-stenroos and @aidesign) studying Software Engineering on third year (Bachelor of Engineering).",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
