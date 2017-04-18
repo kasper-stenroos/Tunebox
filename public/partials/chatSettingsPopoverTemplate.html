@@ -1,0 +1,13 @@
+<div id="popover-template-div">
+	<span id="name-color">NAME COLOR</span>
+
+	<div ng-repeat="item in colorCollection" style="display: inline-block;">
+		<div ng-style="{'background-color' : item}" ng-class="{'black-border' : $index == selectedIndex}" class="color-pallet-units" ng-click="getMessageColor(item, $index)"></div>
+	</div>
+
+	<hr id="popover-hr">
+
+	<div id="popover-settings-secondary">
+		<span>CHAT OPTIONS</span>
+	</div>
+</div>

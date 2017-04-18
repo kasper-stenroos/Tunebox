@@ -1,0 +1,18 @@
+#intro_content {
+	text-align: center;
+	background-color: #c2f0c2;
+	height: 40em;
+}
+
+#secondary_content {
+	text-align: center;
+	background-color: #ccebff;
+	height: 40em;
+}
+
+#third_content {
+	text-align: center;
+	background-color: #ffccff;
+	height: 40em;
+}
+

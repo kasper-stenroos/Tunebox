@@ -1,0 +1,30 @@
+doctype html
+html(ng-app='TuneBox')
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/room.css')
+    link(rel='stylesheet', href='/stylesheets/frontpage.css')
+    link(rel='stylesheet', href='/stylesheets/createRoom.css')
+    link(rel='stylesheet', href='/stylesheets/browse.css')
+    link(rel='stylesheet', href='/stylesheets/ng-img-crop.css')
+    link(rel='stylesheet', href='/stylesheets/popover.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-resource.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.js')
+    script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js")
+    script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js")
+    script(src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.1.4.js")
+    script(src='angular/fileAPI.min.js')
+    script(src='angular/ng-file-upload.min.js')
+    script(src='angular/ng-file-upload-all.min.js')
+    script(src='angular/ng-file-upload-shim.min.js')
+    script(src='angular/ng-img-crop.js')
+    script(src='angular/tunebox.min.js')
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+    script(src="/socket.io/socket.io.js")
+
+  body
+    block content

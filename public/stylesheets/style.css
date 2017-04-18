@@ -1,0 +1,92 @@
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+	overflow-x: hidden !important;
+    padding-top: 2em; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+nav {
+	margin-bottom: 0em;
+}
+
+/*a:focus {
+	outline: 0;
+}*/
+
+.button-styling {
+	background: #4d1a00 !important;
+	border-color: #4d1a00 !important;
+}
+
+.white-underline {
+	text-decoration: underline;
+}
+
+.white-text {
+	color: white !important;
+}
+
+.top-bar {
+	background-color: #4d1a00 !important; 
+	color: white !important;
+}
+
+.testBackground {
+	background-color: red;
+}
+
+.small-margin-left {
+	margin-left: 5%;
+}
+
+.very-small-padding-right {
+	padding-right: 1%;
+}
+
+.tiny-margin-right {
+	margin-right: 2%;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.sideColumn {
+	background-color: #ffbb99;
+}
+
+.sidebar-left {
+	background-color: #ffe6cc;
+	height: 100%;
+	top: 0;
+	left: 0;
+	padding-top: 4.375em;
+	width: 16%;
+}
+
+.sidebar-right {
+	background-color: #ffe6cc;
+	height: 100%;
+	top: 0;
+	right: 0;
+	padding-top: 4.375em;
+	width: 16%;
+}
+
+.hoverEffect { cursor: pointer; }
+
+.add-template-div {
+	width: 15em;
+	height: 18em;
+	/*background-color: #fff;*/
+	margin-bottom: 2em;
+	margin-left: 5%;
+	margin-top: 5%;
+}
+
+.form-group.required .control-label:after {
+  content:"*";
+  color:red;
+}

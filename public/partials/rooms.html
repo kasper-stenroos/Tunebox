@@ -1,0 +1,31 @@
+<div class="row">
+	<div class="col-md-2">
+	</div>
+
+	<div class="col-md-8">
+			<h3> Your rooms </h3>
+
+			<div ng-repeat='room in adminRooms'> 
+				<p> {{room.roomName}} - {{room.description}}</p>
+				<p> {{room.tags}}</p>
+				<p> {{room.currentUsers}} / {{room.userLimit}}</p>
+				<hr>
+			</div> 
+
+			<h3> Public rooms </h3>
+
+
+			<div ng-repeat='room in publicRooms'> 
+				<p> {{room.roomName}} - {{room.description}}</p>
+				<p> {{room.tags}}</p>
+				<p> {{room.currentUsers}} / {{room.userLimit}}</p>
+				<hr>	
+			</div> 
+
+			<a href="/#/"> Home </a>
+	</div>
+
+	<div class="col-md-2">
+	</div>
+
+</div>

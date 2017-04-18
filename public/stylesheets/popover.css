@@ -1,0 +1,31 @@
+#popover-template-div {
+	width: 10em;
+}
+
+.color-pallet-units {
+	width: 1.3em;
+	height: 1.3em;
+	background-color: #000;
+	display: inline-block;
+	margin-left: 0em;
+	margin-right: 0.5em;
+}
+
+#name-color {
+	margin-top: 5%;
+	margin-bottom: 10%;
+	display: block;
+}
+
+#popover-hr {
+	margin-top: 10%;
+	margin-bottom: 1em;
+}
+
+#popover-settings-secondary {
+	height: 10em;
+}
+
+.black-border {
+	outline: solid 0.2em;
+}

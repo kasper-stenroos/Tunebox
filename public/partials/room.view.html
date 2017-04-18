@@ -1,0 +1,171 @@
+<!-- Page Content -->
+<div class="container-fluid">
+
+	<div class="row-fluid">
+
+		<!-- Ad Column -->
+
+		<nav class="col-md-2 bs-docs-sidebar">
+			<ul class="nav nav-stacked fixed sidebar-left">
+				<li class="small-margin-left">
+					<div class="add-template-div">
+						<img src="images/add_template_white.jpg" alt="add_template">
+					</div>
+					<div class="add-template-div">
+						<img src="images/add_template_white.jpg" alt="add_template">
+					</div>
+					<div class="add-template-div">
+						<img src="images/add_template_white.jpg" alt="add_template">
+					</div>
+				</li>
+				<!--<li class="small-margin-left">
+					<span>Place some ads here</span>
+				</li>
+				<li class="small-margin-left">
+					<span>Place some ads here</span>
+				</li>-->
+			</ul>
+		</nav>
+
+		<!-- Main Content Holder -->
+
+		<div class="col-md-8">
+
+			<!-- Room Title Column -->
+
+			<div class="col-md-12">
+				<h1 class="page-header">{{room.roomName}} </h1>
+			</div>
+
+			<!-- Video Content -->
+
+			<div class="col-md-8 video-container">
+				<!--<img class="img-responsive" src="http://placehold.it/750x500" alt="">-->
+
+				<div class="youtube-search-bar">
+					<form ng-submit="search(true)">
+						<input type="search" class="form-control" placeholder="Search for videos in YouTube" ng-model="query">
+					</form>
+				</div>
+
+				<div ng-click="youtube.player.stopVideo();" ng-class="classHidden">
+					<div id="player">
+						<div id="placeholder" style="width: 100%; height: 450px"></div>
+					</div>
+				</div>
+
+				<div ng-class="classShown">
+
+					<ul class="list-group search-results">
+						<li class="list-group-item" ng-repeat="video in results track by $index" ng-click="launch(video, true)">
+							<img class="thumbnail" ng-src="{{ video.thumbnail }}">
+							<div class="title">
+								{{ video.title }}
+							</div>
+							<div class="user">
+							</div>
+							<div class="desc">
+								{{ video.description }}
+							</div>
+						</li>
+					</ul>
+					<p class="after-list" ng-show="results.length === 0">
+						<!--<span ng-hide="loading">{{ label }}</span>-->
+						<span ng-show="loading"><ons-icon icon="fa fa-spinner" size="22px" spin="true"></ons-icon></span>
+					</p>
+					<p id="load_more_button" class="after-list" ng-show="results.length > 0 && nextPageToken !== ''">
+						<input class="btn btn-primary button-styling" ng-click="loadMoreButton.startSpin(); loadMoreButton.setDisabled(true); search(false)" value="Load more videos">
+					</p>
+
+				</div>
+
+				<span id="current_video_title">{{currentVideo.title}}</span>
+
+				<input class="button-styling btn btn-primary" ng-show="video_button" id="video_button" ng-click="show_video()" value="Show Video"> 
+				<input class="button-styling btn btn-primary" ng-show="search_button" id="search_button" ng-click="show_search()" value="Show Search">
+				<br>
+				<input id="toggle-playlist playlist_button" class="button-styling btn btn-primary" ng-hide="!isAdmin" ng-click="togglePlaylist" value="Toggle playlist">
+
+			</div>
+
+			<!-- Room Description -->
+
+			<div class="col-md-4">
+				<span id="room-description-text">{{room.description}}</span><br>
+				<span class="room-tag-text tiny-margin-right" ng-repeat="tag in room.tags">{{tag}}</span>
+				<!--<p>{{artists}}</p>-->
+				<!--<ul>
+					<li>{{currentVideo.title}}</li>
+					<li>{{artist}}</li>
+				</ul>-->
+			</div>
+
+			<!-- Room Recommendations -->
+
+			<div class="col-lg-12">
+				<h3 class="page-header">{{room_recommendations}}</h3>
+			</div>
+
+			<div class="col-sm-3 col-xs-6">
+				<a href="#">
+					<img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
+				</a>
+			</div>
+
+			<div class="col-sm-3 col-xs-6">
+				<a href="#">
+					<img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
+				</a>
+			</div>
+
+			<div class="col-sm-3 col-xs-6">
+				<a href="#">
+					<img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
+				</a>
+			</div>
+
+			<div class="col-sm-3 col-xs-6">
+				<a href="#">
+					<img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
+				</a>
+			</div>
+
+		</div>
+
+		<!-- Chat Column -->
+
+		<nav class="chat-column col-md-2 bs-docs-sidebar">
+			<ul id="sidebar-chat" class="nav nav-stacked fixed">
+				<li id="chat-room-name">
+					<span>{{admin.name}}</span>
+					<hr>
+				</li>
+				<li id="chat-content">
+					<div id="chat-message-div" ng-repeat="message in messages">
+						<span ng-style="{ 'color' :  userColor }" id="message-sender">{{message.sender}}:</span>
+						<span id="message-text">{{message.message}}</span> 
+					</div>
+				</li>
+				<li id="chat-bottom">
+					<textarea data-ng-keypress="onEnterKeyPress($event)" class="form-control" id="send-message-box" placeholder="Send a message" name="chat-text" rows="2" ng-model="message.message"></textarea>
+					<span uib-popover-template="dynamicPopover.templateUrl" id="chat-settings-cog" class="glyphicon glyphicon-cog"></span>
+					<input class="btn btn-primary button-styling" id="send-message" ng-click="sendMessage()" value="Chat">
+				</li>
+			</ul>
+		</nav>
+
+	</div>
+	<!-- /.row -->
+
+	<!-- Footer -->
+	<footer>
+		<div class="row-fluid">
+			<div class="col-lg-12">
+				<p>Copyright &copy; TuneBox 2016</p>
+			</div>
+		</div>
+		<!-- /.row -->
+	</footer>
+
+</div>
+<!-- /.container -->

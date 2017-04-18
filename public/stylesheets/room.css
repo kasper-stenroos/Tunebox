@@ -1,0 +1,158 @@
+/* sidebar */
+.bs-docs-sidebar {
+
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+#sidebar-chat {
+	background-color: #e6e6e6;
+	height: 100%;
+	top: 0;
+	right: 0;
+	padding-top: 4.375em;
+	width: 16%;
+}
+
+#chat-room-name {
+	text-align: center;
+}
+
+#chat-room-name hr {
+	margin-bottom: 0.625em;
+	margin-top: 0.625em;
+	background-color: #bfbfbf;
+	border-color: #bfbfbf;
+}
+
+#chat-content {
+	height: 83%;
+	margin-left: 5%;
+	overflow-y: scroll;
+}
+
+#send-message-box {
+	width: 90%;
+	margin-left: 5%;
+	padding-left: 2%;
+	height: 3.125em;
+	resize: none;
+}
+
+#send-message {
+	float: right;
+	margin-right: 5%;
+	margin-top: 2%;
+	color: #fff;
+	width: 4em;
+	height: 2em;
+}
+
+#chat-bottom {
+
+}
+
+.hidden {
+	display: none;
+}
+
+.shown {
+	display: block;
+}
+
+.black-background {
+	background-color: #000000;
+}
+
+/*.container {
+	margin: 0px !important;
+}*/
+
+.youtube-search-bar {
+	margin-bottom: 0.5em;
+}
+
+.video-container {
+	/*height: 550px;*/
+	width: 46.875em;
+}
+
+.youtube-search-bar {
+	width: 100%;
+}
+
+.search-results {
+	height: 28.125em;
+	width: 100%;
+	overflow-y: scroll;
+}
+
+.portfolio-item {
+    margin-bottom: 1.563em;
+}
+
+footer {
+    margin: 3.125em 0;
+    text-align: center;
+}
+
+#search_video_button, #load_more_button {
+	display: inline-block;
+}
+
+#chat-column {
+	position: absolute;
+	height: 100%;
+	background-color: #e6e6e6;
+	top: 0;
+	right: 0;
+	overflow-y: hidden;
+	padding-top: 4.375em;
+}
+
+#chat-message-div {
+	margin-bottom: 0.5em;
+}
+
+#message-sender {
+	font-weight: bold;
+}
+
+#chat-settings-cog {
+	margin-top: 2%;
+	margin-left: 7%;
+	color: #4d1a00;
+}
+
+#chat-settings-cog:hover {
+	color: #000;
+	cursor: pointer; 
+	cursor: hand;
+}
+
+#room-description-text {
+	display: inline-block;
+	font-size: 1.5em;
+	margin-bottom: 1em;
+}
+
+#video_button {
+	color: #fff;
+	float: right;
+	width: 8em !important;
+	height: 2em !important;
+}
+
+#search_button {
+	color: #fff;
+	float: right;
+	width: 8em !important;
+	height: 2em !important;
+}
+
+#current_video_title {
+	display: inline-block;
+	font-size: 1.5em;
+}

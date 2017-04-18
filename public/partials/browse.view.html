@@ -1,0 +1,76 @@
+<div class="container-fluid">
+	
+	<div class="row-fluid">
+
+		<nav class="col-md-2 bs-docs-sidebar">
+			<ul class="nav nav-stacked fixed sidebar-left">
+				<li class="small-margin-left">
+					<div class="add-template-div">
+						<img src="images/add_template_white.jpg" alt="add_template">
+					</div>
+					<div class="add-template-div">
+						<img src="images/add_template_white.jpg" alt="add_template">
+					</div>
+					<div class="add-template-div">
+						<img src="images/add_template_white.jpg" alt="add_template">
+					</div>
+				</li>
+					<!--<li class="small-margin-left">
+						<span>Place some ads here</span>
+					</li>
+					<li class="small-margin-left">
+						<span>Place some ads here</span>
+					</li>-->
+			</ul>
+		</nav>
+
+
+		<div class="col-md-8">
+			<div class="row-fluid">
+				<div class="col-md-12">
+					<a href ng-click="showPublicRooms()" ng-class="publicActive" class="room-type-selection">Public Rooms</a>
+					<a href ng-click="showYourRooms()" ng-class="yourActive" class="room-type-selection">Your rooms</a>
+					<hr id="room-separator">
+					<br>
+
+					<div ng-show="yourRoom" ng-repeat='room in adminRooms' class="inline-block room-details"> 
+						<!--<a href="/#/room/{{room._id}}"> {{room.roomName}} - {{room.description}}</a> -->
+						<!--<img ng-src="data:image/png;base64, {{ room.thumbnail }}" class="room_thumbnail">-->
+						<a href ng-click="goToRoom(room._id)">
+							<!-- <img src="images/thumbnail.jpg" class="room_thumbnail"> -->
+							<img ng-src="{{ room.thumbnail }}" class="room_thumbnail">
+							<br>
+							<span class="room-name-link">{{room.roomName}}</span>
+						</a>
+						<a href="/#/room/edit/{{room._id}}">EDIT</a>
+						<br>
+						<span class="room-tag-text" ng-repeat='tag in room.tags'> {{tag}}</span>
+						<br>
+						<span class="room-user-amount"> {{room.currentUsers}} / {{room.userLimit}} Viewers on {{room.roomName}}</span>
+					</div>  
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class=col-md-12>
+					<div ng-show="publicRoom" ng-repeat='room in publicRooms' class="inline-block room-details">
+						<a href ng-click="goToRoom(room._id)">
+							<img ng-src="{{ room.thumbnail }}" class="room_thumbnail"><br>
+							<span class="room-name-link">{{room.roomName}}</span>
+						</a> 
+						<br>
+						<span class="room-tag-text" ng-repeat='tag in room.tags'> {{tag}}</span>
+						<br>
+						<span class="room-user-amount"> {{room.currentUsers}} / {{room.userLimit}} Viewers on {{room.roomName}}</span>
+					</div> 
+				</div>
+			</div>
+		</div>
+
+		<nav class="col-md-2 bs-docs-sidebar">
+			<ul class="nav nav-stacked fixed sidebar-right">
+				<li>
+					<span>Tag Selection Here?</span>
+				</li>
+			</ul>
+		</nav>
+</div>

@@ -1,0 +1,38 @@
+<div class="row-fluid">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <h1>Register</h1>
+        <div ng-show="error != ''" class="alert alert-danger"><strong>Error: </strong>{{error}}. <span class="glyphicon glyphicon-remove hoverEffect" aria-hidden="true" ng-click="hideMessages()"></span></div>
+        <form name="registerForm">
+            <div class="form-group required">
+                <label class="control-label">Email</label>
+                <input class="form-control" ng-model="user.email"></input>
+            </div>
+            <div class="form-group required">
+                <label class="control-label">Username</label>
+                <input class="form-control" ng-model="user.name"></input>
+            </div>
+            <div class="form-group required">
+                <label class="control-label">Password</label>
+                <input type="password" name="password" class="form-control" ng-model="user.password" ng-minlength="2"></input>
+
+                <div role="alert" class="alert alert-danger" ng-show="registerForm.password.$error.minlength"><span class="error" >Too short!</span></div>
+            </div>
+            <p>Optional</p>
+            <div class="form-group">
+                <label>Organization (company, band, etc...)</label>
+                <input class="form-control" ng-model="user.organization"></input>
+            </div>
+            <div class="form-group">
+                <label>Home page URL</label>
+                <input class="form-control" ng-model="user.homePage"></input>
+            </div>
+            <div class="form-group">
+                <label>Tags (separated with comma)</label>
+                <textarea class="form-control" ng-model="user.tags" ng-list=","></textarea>
+            </div>
+            <input type="button" class="btn btn-primary button-styling" value="Register" ng-click="register()"></input>
+        </form>
+    </div>
+    <div class="col-md-4"></div>
+</div>

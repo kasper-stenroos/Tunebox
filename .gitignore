@@ -1,0 +1,7 @@
+# Dependency directory
+node_modules
+
+# Environment variables
+.env
+
+public/angular/tunebox.min.js

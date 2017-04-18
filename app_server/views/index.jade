@@ -1,0 +1,37 @@
+extends layout
+
+block content
+	nav(class="navbar navbar-inverse navbar-fixed-top top-bar" role="navigation" ng-controller="navigationCtrl")
+		div.row
+			//div.col-md-2
+			div.col-md-12
+				div.navbar-header
+				button(type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1")
+					span.sr-only.white-text Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a(class="navbar-brand white-text" href="#/") Tunebox
+				div.collapse.navbar-collapse#bs-example-navbar-collapse1
+					ul.nav.navbar-nav
+						li(ng-show="loginData.showLogin")
+							a(href="#/browse" class="white-text") Browse
+						li(ng-show="loginData.showLogin")
+							a(href="#/create-room" class="white-text") Create Room
+					ul.nav.navbar-nav.navbar-right.very-small-padding-right
+						li(ng-hide="loginData.showLogin")
+							a(href="#/register")
+								span.glyphicon.glyphicon-user.white-text
+								span.white-text  Sign Up 
+						li(ng-hide="loginData.showLogin")
+							a(href="#/login")
+								span.glyphicon.glyphicon-log-in.white-text
+								span.white-text  Login
+						li(ng-show="loginData.showLogin")
+							a(href="#/profile")
+								span.white-text {{user.name}}
+						li(ng-show="loginData.showLogin")
+							a(href="" ng-click="logout_function()")
+								span.glyphicon.glyphicon-log-out.white-text
+								span.white-text Log Out
+	div(ng-view)
